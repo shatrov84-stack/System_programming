@@ -5,7 +5,7 @@
 
 ---
 ## 📚 **ВИДЕО:**
-https://vk.com/away.php?to=https%3A%2F%2Fyoutu.be%2FGgWk1b2pXYA%3Fsi%3DTbscENxE8mw5ijAN&utf=1
+https://youtu.be/GgWk1b2pXYA?si=TbscENxE8mw5ijAN
 
 ## 📚 **ТЕОРЕТИЧЕСКИЕ МАТЕРИАЛЫ:**
 

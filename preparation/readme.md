@@ -689,8 +689,8 @@ DiagnosticKit/
 ## 📞 **ПОДДЕРЖКА И РЕСУРСЫ:**
 
 ### **Официальная документация:**
-- [Windows Terminal Documentation](https://docs.microsoft.com/terminal)
-- [WSL Documentation](https://docs.microsoft.com/wsl)
+- [Windows Terminal Documentation](https://learn.microsoft.com/ru-ru/windows/terminal/)
+- [WSL Documentation](https://learn.microsoft.com/ru-ru/windows/wsl/)
 - [WinGet Documentation](https://docs.microsoft.com/windows/package-manager)
 - [MSVC Compiler Options](https://docs.microsoft.com/cpp/build/reference/compiler-options)
 - [WinDbg Documentation](https://docs.microsoft.com/windows-hardware/drivers/debugger)

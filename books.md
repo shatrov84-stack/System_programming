@@ -1,3 +1,5 @@
+# [ПОДГОТОВИТЕЛЬНЫЙ БЛОК: ИНСТРУМЕНТЫ И ОСНОВЫ СИСТЕМНОГО ПРОГРАММИСТА](
+
 # Windows System Programming Learning Path
 
 ## 📚 Основные ресурсы

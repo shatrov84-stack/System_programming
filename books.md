@@ -1,4 +1,4 @@
-# [ПОДГОТОВИТЕЛЬНЫЙ БЛОК: ИНСТРУМЕНТЫ И ОСНОВЫ СИСТЕМНОГО ПРОГРАММИСТА](
+# [ПОДГОТОВИТЕЛЬНЫЙ БЛОК: ИНСТРУМЕНТЫ И ОСНОВЫ СИСТЕМНОГО ПРОГРАММИСТА](https://github.com/shatrov84-stack/System_programming/blob/d4b8d0be65f36bfb96a10015c89c2bfafcf24c7a/preparation/readme.md)
 
 # Windows System Programming Learning Path
 

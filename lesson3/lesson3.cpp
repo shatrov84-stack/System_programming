@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #define WIN32_LEAN_AND_MEAN
 
 #include <windows.h>
@@ -365,21 +365,11 @@ void FindProcessByName()
         do
         {
             // Поиск по частичному совпадению (без учета регистра)
-            TCHAR* lowerExeFile = _tcsdup(pe32.szExeFile);
-            TCHAR* lowerSearchName = _tcsdup(searchName);
-
-            _tcslwr(lowerExeFile);
-            _tcslwr(lowerSearchName);
-
-            if (_tcsstr(lowerExeFile, lowerSearchName) != NULL)
+            if (_tcsstr(_tcslwr(_tcsdup(pe32.szExeFile)), _tcslwr(_tcsdup(searchName))) != NULL)
             {
                 PrintProcessInfo(&pe32);
                 foundCount++;
             }
-
-            free(lowerExeFile);
-            free(lowerSearchName);
-
         } while (Process32Next(hSnapshot, &pe32));
     }
 
@@ -757,7 +747,7 @@ void PrintError(const char* functionName, DWORD errorCode)
 {
     LPTSTR errorMsg = NULL;
 
-    DWORD chars = FormatMessage(
+    FormatMessage(
         FORMAT_MESSAGE_ALLOCATE_BUFFER |
         FORMAT_MESSAGE_FROM_SYSTEM |
         FORMAT_MESSAGE_IGNORE_INSERTS,
@@ -769,10 +759,14 @@ void PrintError(const char* functionName, DWORD errorCode)
         NULL
     );
 
-    if (chars > 0 && errorMsg != NULL)
+    if (errorMsg != NULL)
     {
-        // Используем wprintf для Unicode строк
-        wprintf(L"Ошибка в функции %hs (код %lu): %ls", functionName, errorCode, errorMsg);
+        // Конвертируем в многобайтовую строку для вывода
+        size_t converted = 0;
+        char mbErrorMsg[512];
+        wcstombs_s(&converted, mbErrorMsg, errorMsg, sizeof(mbErrorMsg));
+
+        printf("Ошибка в функции %s (код %lu): %s", functionName, errorCode, mbErrorMsg);
         LocalFree(errorMsg);
     }
     else

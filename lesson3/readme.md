@@ -78,6 +78,9 @@
 #include <string.h>
 #include <tlhelp32.h>
 #include <tchar.h>
+#include <psapi.h>
+
+#pragma comment(lib, "psapi.lib")
 
 // Прототипы функций
 void PrintMenu();
